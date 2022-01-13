@@ -31,11 +31,10 @@ jobs:
           repository: Moyodao/AvatarRenderer
           path: renderer
           token: ${{ secrets.TOKEN }}
-      
-      - run: tree
-      - run: sudo cd renderer/platforms/Web
-      - run: ls
-      - run: ./build_env.sh
+    
+      - name: Build
+        working-directory: renderer/platforms/Web
+        run: ./build_env.sh
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
