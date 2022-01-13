@@ -34,6 +34,7 @@ jobs:
       
       - run: tree
       - run: cd renderer/platforms/Web
+      - run: ls
       - run: ./build_env.sh
       - uses: peaceiris/actions-gh-pages@v3
         with:
