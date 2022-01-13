@@ -33,7 +33,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
       
       - run: cd renderer/platforms/Web
-      - run: sudo ./build_env.sh
+      - run: ./build_env.sh
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
