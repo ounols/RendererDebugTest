@@ -30,7 +30,7 @@ jobs:
         with:
           repository: Moyodao/AvatarRenderer
           path: renderer
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
       
       - run: cd renderer/platforms/Web
       - run: sudo ./build_env.sh
